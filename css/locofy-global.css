@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* Common Style Variables */
+
+  /* Color */
+  ---1: rgba(0, 0, 0, 0.5);
+  ---: rgba(0, 0, 0, 0.5);
+  --color: #001830;
+  --color-black: #000;
+  --color-darkslategray: #334a63;
+  --color-deepskyblue: #55beff;
+  --color-gray-100: #21160d;
+  --color-gray-200: rgba(0, 0, 0, 0.7);
+  --color-gray-300: rgba(255, 255, 255, 0.7);
+  --color-gray-400: rgba(255, 255, 255, 0.5);
+  --color-gray-500: rgba(0, 24, 48, 0.7);
+  --color-gray-600: rgba(255, 255, 255, 0.3);
+  --color-lavender-100: rgba(211, 231, 245, 0.3);
+  --color-lavender-200: rgba(211, 236, 255, 0.8);
+  --color1: #fff;
+  --color2: rgba(0, 24, 48, 0.8);
+  --color3: rgba(211, 230, 245, 0.3);
+  --color4: #fff4ee;
+  --color5: #001830;
+  --color6: #fff;
+  --color7: rgba(211, 230, 245, 0.3);
+  --color8: rgba(0, 24, 48, 0.8);
+
+  /* Gap */
+  --gap-4: 4px;
+  --gap-6: 6px;
+  --gap-8: 8px;
+  --gap-10: 10px;
+  --gap-11: 11px;
+  --gap-15: 15px;
+  --gap-16: 16px;
+  --gap-19: 19px;
+  --gap-20: 20px;
+  --gap-22: 22px;
+  --gap-30: 30px;
+  --gap-31: 31px;
+  --gap-32: 32px;
+
+  /* Padding */
+  --padding-0: 0px;
+  --padding-1: 1px;
+  --padding-3: 3px;
+  --padding-8: 8px;
+  --padding-10: 10px;
+  --padding-11: 11px;
+  --padding-16: 16px;
+  --padding-20: 20px;
+  --padding-24: 24px;
+  --padding-25: 25px;
+  --padding-27: 27px;
+  --padding-28: 28px;
+  --padding-30: 30px;
+  --padding-32: 32px;
+  --padding-35: 35px;
+  --padding-36: 36px;
+  --padding-38: 38px;
+  --padding-70: 70px;
+  --padding-141: 141px;
+  --padding-15_5: 15.5px;
+
+  /* BorderRadius */
+  --br-10: 10px;
+  --br-30: 30px;
+  --br-40: 40px;
+  --br-25_8: 25.8px;
+
+  /* Font */
+  --font-onest: Onest;
+  --font-unbounded: Unbounded;
+
+  /* FontSize */
+  --fs-13: 13px;
+  --fs-15: 15px;
+  --fs-16: 16px;
+  --fs-19: 19px;
+  --fs-20: 20px;
+  --fs-22: 22px;
+  --fs-26: 26px;
+  --fs-29: 29px;
+  --fs-32: 32px;
+  --fs-36: 36px;
+
+  /* WidthHeights */
+  --height-19: 19px;
+  --height-26: 26px;
+  --height-28: 28px;
+  --height-40: 40px;
+  --height-45: 45px;
+  --height-80: 80px;
+  --height-18_2: 18.2px;
+  --min-w-270: 270px;
+  --width-305: 305px;
+  --width-307: 307px;
+  --width-18_2: 18.2px;
+
+  /* LetterSpacings */
+  --ls-0_03: 0.03;
+
+  --left-0: 0px;
+  --top-0: 0px;
+}

@@ -1,0 +1,1015 @@
+/* ===== Overrides for Locofy-generated page ===== */
+
+html, body { margin: 0; padding: 0; min-height: 100%; }
+body { background: #FFFFFF; }
+
+/* === Figma frame: width: 1280, height: 832 (first viewport) === */
+/* (top/left из Figma — это координаты артборда на канвасе, в браузере не применяются) */
+
+.locofy_root {
+  width: 1280px;
+  max-width: 1280px;
+  margin: 0 auto;
+  opacity: 1;
+  /* НИКАКОГО transform здесь — иначе ломает position: fixed у хедера */
+}
+
+/* Первая секция — единая позиционная база для всех абсолютных детей */
+.locofy_section {
+  position: relative !important;
+  min-height: 832px !important;
+  box-sizing: border-box;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+/* Гасим позиционирование промежуточных оберток, чтобы div12/div13 ушли к секции */
+.locofy_frame-section,
+.locofy_frame-parent,
+.locofy_container {
+  position: static !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: 0 !important;
+  width: auto !important;
+  max-width: none !important;
+  background: transparent !important;
+}
+
+/* Радиальный градиент за метал-стеклом — точные Figma-координаты */
+.locofy_section::before {
+  content: '';
+  position: absolute;
+  top: 67px;
+  left: 471px;
+  width: 784px;
+  height: 677px;
+  background: radial-gradient(ellipse at 55% 45%,
+    rgba(140, 200, 255, 0.7) 0%,
+    rgba(170, 215, 255, 0.5) 25%,
+    rgba(210, 235, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0) 75%);
+  filter: blur(30px);
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+/* Чтобы title (.locofy_inner) был поверх градиента */
+.locofy_inner { position: relative; z-index: 3; }
+
+/* ===== HEADER NAV: точные позиции по Figma ===== */
+.locofy_navigation-description {
+  position: relative;
+  flex: none !important;
+  width: 754px !important;
+  margin-left: 0 !important;
+}
+
+.locofy_div2 {
+  width: 754px;
+  height: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 !important;
+}
+
+/* Главная — активная (тёмная) */
+.locofy_div2 a.locofy_div3 {
+  color: #001830 !important;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* Остальные ссылки — полупрозрачные чёрные (#00000080 = rgba(0,0,0,0.5)) */
+.locofy_div2 a.locofy_div4 {
+  color: rgba(0, 0, 0, 0.5) !important;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.locofy_div2 a.locofy_div4:hover {
+  color: #001830 !important;
+}
+
+/* ===== HERO: точные Figma-координаты — все абсолютно от .locofy_section ===== */
+
+/* Убираем locofy-овский круг */
+.locofy_icon4 { display: none !important; }
+
+/* Метал-стекло — точные координаты Figma + поворот 6.51° + mix-blend Lighten */
+.locofy_div12 {
+  position: absolute !important;
+  top: 70px !important;
+  left: 664px !important;
+  width: 814.31px !important;
+  height: 542.08px !important;
+  transform: rotate(6.51deg) !important;
+  transform-origin: center center !important;
+  mix-blend-mode: lighten !important;
+  filter: none !important;
+  z-index: 2 !important;
+}
+
+.locofy_div12 .locofy_figure-one-icon,
+.locofy_div12 .locofy_figure-two-icon {
+  filter: none !important;
+  opacity: 1 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+}
+
+/* Плашка преимуществ — абсолютная позиция Figma */
+.locofy_div13 {
+  position: absolute !important;
+  top: 611px !important;
+  left: 70px !important;
+  width: 1140px !important;
+  height: 165px !important;
+  border-radius: 30px !important;
+  padding: 30px 50px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 50px !important;
+  background: rgba(255, 255, 255, 0.18) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  backdrop-filter: blur(14px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(140%) !important;
+  box-shadow: 0 10px 40px rgba(140, 170, 200, 0.08) !important;
+  z-index: 5 !important;
+  box-sizing: border-box !important;
+}
+
+.locofy_div13 > div {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* ===== APP DOWNLOAD: точные Figma-координаты ===== */
+.locofy_div78 {
+  position: relative !important;
+  width: 1280px !important;
+  max-width: 100% !important;
+  min-height: 660px !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+  overflow: visible !important;     /* было hidden — на 125% обрезало правую часть */
+  display: block !important;        /* было flex — flex ограничивал ширину детей */
+}
+
+/* Снимаем locofy-овские ограничения на parent17/parent20, которые ломаются на больших зумах */
+.locofy_parent17 {
+  position: static !important;
+  display: block !important;
+  max-width: none !important;
+  flex: none !important;
+  padding: 0 !important;
+}
+
+.locofy_parent20 {
+  position: static !important;
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Левая колонка — текст + бейджи + QR */
+.locofy_parent17 {
+  position: static !important;
+  display: block !important;
+  padding: 0 !important;
+}
+
+/* Заголовок */
+.locofy_div79 {
+  position: absolute !important;
+  top: 143px !important;
+  left: 70px !important;
+  width: 686px !important;
+  height: 64px !important;
+  font-family: 'Onest', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 32px !important;
+  line-height: 100% !important;
+  letter-spacing: 0 !important;
+  color: #001830 !important;
+  margin: 0 !important;
+  z-index: 3;
+}
+
+/* Бейджи App Store / Google Play */
+.locofy_parent18 {
+  position: static !important;
+  padding: 0 !important;
+}
+
+.locofy_icon11 {
+  position: absolute !important;
+  top: 257px !important;
+  left: 70px !important;
+  width: 377px !important;
+  height: 65px !important;
+  object-fit: contain !important;
+  z-index: 3;
+}
+
+/* QR-коды */
+.locofy_parent19 {
+  position: static !important;
+  padding: 0 !important;
+}
+
+.locofy_parent19 .locofy_icon12:nth-child(1) {
+  position: absolute !important;
+  top: 330px !important;
+  left: 70px !important;
+  width: 125px !important;
+  height: 125px !important;
+  object-fit: contain !important;
+  z-index: 3;
+}
+
+.locofy_parent19 .locofy_icon12:nth-child(2) {
+  position: absolute !important;
+  top: 330px !important;
+  left: 259px !important;
+  width: 125px !important;
+  height: 125px !important;
+  object-fit: contain !important;
+  z-index: 3;
+}
+
+/* Правая колонка — фото кофе + телефон */
+.locofy_parent20 {
+  position: static !important;
+  padding: 0 !important;
+}
+
+/* Декоративный SVG за фото */
+.locofy_icon14 {
+  position: absolute !important;
+  top: 90px !important;
+  left: 760px !important;
+  width: 480px !important;
+  height: 540px !important;
+  opacity: 0.5 !important;
+  filter: blur(30px) !important;
+  z-index: 1;
+}
+
+/* Само фото "кофе + телефон" */
+.locofy_icon15 {
+  position: absolute !important;
+  top: 143px !important;
+  left: 834px !important;
+  width: 332.3px !important;
+  height: 459px !important;
+  object-fit: contain !important;
+  z-index: 3 !important;
+  filter: drop-shadow(0 20px 40px rgba(100, 140, 180, 0.2));
+}
+
+/* ===== RUSSIA MAP SECTION ===== */
+/* Делаем общий контейнер позиционирующим */
+.locofy_div23 {
+  position: relative !important;
+  min-height: 900px;
+  padding: 0 !important;
+}
+
+/* Текст-карточка "Кофелар - международная компания" */
+.locofy_wrapper3 {
+  position: absolute !important;
+  top: 145px;
+  left: 90px;
+  width: 759px;
+  height: 111px;
+  border-radius: 30px;
+  padding: 30px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 5;
+  box-sizing: border-box;
+}
+
+/* Парент карты + чисел */
+.locofy_parent3 {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 900px;
+}
+
+/* Карта России — точные координаты Figma */
+.locofy_icon5 {
+  position: absolute !important;
+  top: 103px;
+  left: 51px;
+  width: 1077.59px !important;
+  height: 619.02px !important;
+  transform: rotate(-5.72deg);
+  opacity: 1;
+  object-fit: contain;
+  z-index: 2;
+}
+
+/* Панель цифр — точные координаты + grid 2x3 */
+.locofy_div26 {
+  position: absolute !important;
+  top: 461px;
+  left: 651px;
+  width: 558px;
+  height: 385px;
+  border-radius: 30px;
+  padding: 36px 44px;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 30px;
+  column-gap: 30px;
+  z-index: 5;
+  box-sizing: border-box;
+}
+
+.locofy_div26 > div { margin: 0 !important; }
+
+/* ===== ECO: кружок-стрелка возле "Узнать больше"/"Подробнее" — кликабельный ===== */
+.locofy_div55 {
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.locofy_div55:hover { transform: scale(1.05); }
+
+.locofy_div11 { cursor: pointer; }
+
+/* ===== Убираем геометрические SVG-декорации (метал-стекло НЕ трогаем) ===== */
+.locofy_icon4,
+.locofy_icon6,
+.locofy_icon8,
+.locofy_icon9,
+.locofy_icon10,
+.locofy_icon14,
+.locofy_icon16 {
+  display: none !important;
+}
+
+/* ===== Форматы сотрудничества — рядом, в одну линию (две карточки в строчку) ===== */
+.locofy_parent8 {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: stretch !important;
+  gap: 24px !important;
+  width: 100% !important;
+  flex-wrap: nowrap !important;
+}
+
+.locofy_section4,
+.locofy_section5 {
+  flex: 1 1 0 !important;
+  width: auto !important;
+  max-width: none !important;
+  min-width: 0 !important;
+}
+
+/* ===== ЭКОСИСТЕМА КОФЕЛАР — единая панель, все элементы абсолютно внутри ===== */
+.locofy_section2 { position: relative !important; }
+
+/* Прячем родительский контейнер метал-стекла (а сам стеклянный image будет перемещён внутрь панели через JS) */
+.locofy_section2 .locofy_parent4 { display: none !important; }
+
+/* Панель — фиксированные размеры, абсолютное позиционирование внутри */
+.locofy_section2 .locofy_parent5 {
+  position: relative !important;
+  display: block !important;
+  width: 1140px !important;
+  max-width: 100% !important;
+  height: 720px !important;
+  margin: 30px auto 0 !important;
+  padding: 0 !important;
+  background: linear-gradient(180deg, rgba(255,255,255,0.55) 0%, rgba(220,238,251,0.45) 100%) !important;
+  border: 1px solid rgba(255,255,255,0.7) !important;
+  border-radius: 30px !important;
+  backdrop-filter: blur(12px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(140%) !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+/* Скрываем пустые стабы Locofy */
+.locofy_section2 .locofy_div43,
+.locofy_section2 .locofy_div45 { display: none !important; }
+
+/* Промежуточные обёртки распадаются (display: contents) — дети становятся прямыми потомками панели */
+.locofy_section2 .locofy_toggles,
+.locofy_section2 .locofy_parent6,
+.locofy_section2 .locofy_frame-group,
+.locofy_section2 .locofy_wrapper4 {
+  display: contents !important;
+}
+
+/* Табы — абсолютно сверху */
+.locofy_section2 .locofy_toggles-parent {
+  position: absolute !important;
+  top: 36px !important;
+  left: 50px !important;
+  right: 50px !important;
+  width: auto !important;
+  z-index: 5 !important;
+  padding: 0 0 18px 0 !important;
+  margin: 0 !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;
+}
+
+.locofy_section2 .locofy_div44 {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 680px !important;
+  gap: 40px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.locofy_section2 .locofy_div44 h3 {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  white-space: nowrap;
+}
+
+/* Карточки — абсолютные позиции 2x2, по 307x200, gap 30 */
+.locofy_section2 .locofy_div46,
+.locofy_section2 .locofy_div48,
+.locofy_section2 .locofy_div50,
+.locofy_section2 .locofy_div52 {
+  position: absolute !important;
+  width: 307px !important;
+  height: 200px !important;
+  min-width: 0 !important;
+  max-width: 307px !important;
+  flex: none !important;
+  border-radius: 40px !important;
+  padding: 30px !important;
+  background: rgba(255, 255, 255, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.7) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  z-index: 3 !important;
+}
+
+.locofy_section2 .locofy_div46 { top: 130px !important; left: 50px !important; }
+.locofy_section2 .locofy_div48 { top: 130px !important; left: 387px !important; }
+.locofy_section2 .locofy_div50 { top: 360px !important; left: 50px !important; }
+.locofy_section2 .locofy_div52 { top: 360px !important; left: 387px !important; }
+
+.locofy_section2 .locofy_div46 h3,
+.locofy_section2 .locofy_div48 h3,
+.locofy_section2 .locofy_div50 h3,
+.locofy_section2 .locofy_div52 h3 {
+  margin: 0 !important;
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  color: #001830 !important;
+}
+
+.locofy_section2 .locofy_div46 > div,
+.locofy_section2 .locofy_div48 > div,
+.locofy_section2 .locofy_div50 > div,
+.locofy_section2 .locofy_div52 > div {
+  font-size: 12px !important;
+  line-height: 16px !important;
+  color: rgba(0, 0, 0, 0.55) !important;
+}
+
+/* Метал-стекло — будет перемещено в панель через JS, тут стили */
+.locofy_section2 .locofy_parent5 > .locofy_icon7 {
+  display: block !important;
+  position: absolute !important;
+  right: -30px !important;
+  top: 90px !important;
+  width: 520px !important;
+  height: auto !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  opacity: 0.95;
+}
+
+/* Кнопка "Подробнее" — абсолютно в правом нижнем углу панели */
+.locofy_section2 .locofy_parent7 {
+  position: absolute !important;
+  right: 50px !important;
+  bottom: 50px !important;
+  z-index: 4 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* ===== Кликабельные табы экосистемы ===== */
+.locofy_div44 h3 {
+  cursor: pointer;
+  transition: color 0.2s ease;
+  user-select: none;
+}
+
+.locofy_div44 h3:not(.is-active) {
+  color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.locofy_div44 h3.is-active {
+  color: #001830 !important;
+  position: relative;
+}
+
+.locofy_div44 h3.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 2px;
+  background: #001830;
+}
+
+/* ===== Уменьшаем разрывы между секциями ===== */
+.locofy_root { gap: 0 !important; padding-bottom: 0 !important; }
+
+.locofy_frame-main { gap: 40px !important; padding: 40px 0 !important; }
+
+.locofy_section2,
+.locofy_section3,
+.locofy_section6,
+.locofy_section7 {
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+
+.locofy_div78 {
+  margin-top: 0 !important;
+}
+
+/* ===== ERP-карточка: ноутбук виден внутри ===== */
+/* В Locofy картинка позиционирована right:-223 bottom:-158 — уезжает за пределы и обрезается overflow:hidden */
+.locofy_image-171-icon {
+  position: absolute !important;
+  right: 10px !important;
+  bottom: 10px !important;
+  left: auto !important;
+  top: auto !important;
+  width: 200px !important;
+  height: auto !important;
+  max-height: 200px !important;
+  object-fit: contain !important;
+  margin: 0 !important;
+  z-index: 1 !important;
+}
+
+/* Карточка ERP должна позволять картинке быть внутри */
+.locofy_div66 {
+  position: relative !important;
+  min-height: 260px !important;
+}
+
+.locofy_parent11 {
+  position: static !important;
+}
+
+/* ===== Сертифицированная сервисная служба: наушники видны (Figma: 174×225, top 52, left 202) ===== */
+.locofy_image-167-icon {
+  position: absolute !important;
+  top: 52px !important;
+  left: 202px !important;
+  right: auto !important;
+  bottom: auto !important;
+  width: 174px !important;
+  height: 225px !important;
+  object-fit: contain !important;
+  margin: 0 !important;
+  z-index: 1 !important;
+}
+
+.locofy_div72 {
+  position: relative !important;
+  min-height: 320px !important;
+}
+
+.locofy_parent13 {
+  position: static !important;
+}
+
+/* ===== ГРАДИЕНТЫ-ПЯТНА #1958991A для секций ===== */
+
+/* Схема работы — пятно с поворотом -6.48°, должно "перетекать" в Экосистему */
+.locofy_div33 {
+  position: relative !important;
+  overflow: visible !important;
+}
+.locofy_div33::before {
+  content: '';
+  position: absolute;
+  top: 165px;
+  left: -146px;
+  width: 1133.53px;
+  height: 787.59px;
+  transform: rotate(-6.48deg);
+  transform-origin: center center;
+  background: radial-gradient(ellipse at center,
+    rgba(25, 88, 153, 0.28) 0%,
+    rgba(25, 88, 153, 0.20) 35%,
+    rgba(25, 88, 153, 0.10) 65%,
+    rgba(25, 88, 153, 0) 100%);
+  border-radius: 50%;
+  filter: blur(20px);
+  z-index: 0;
+  pointer-events: none;
+}
+/* контент схемы поверх пятна */
+.locofy_div33 > * { position: relative; z-index: 2; }
+
+/* Экосистема Кофелар — допускаем "перетекание" сверху */
+.locofy_section2 {
+  position: relative !important;
+  overflow: visible !important;
+}
+
+/* Форматы сотрудничества — пятно */
+.locofy_section3 {
+  position: relative !important;
+  overflow: visible !important;
+}
+.locofy_section3::before {
+  content: '';
+  position: absolute;
+  top: 506px;
+  left: -121px;
+  width: 1167px;
+  height: 562px;
+  background: radial-gradient(ellipse at center,
+    rgba(25, 88, 153, 0.28) 0%,
+    rgba(25, 88, 153, 0.18) 45%,
+    rgba(25, 88, 153, 0.08) 75%,
+    rgba(25, 88, 153, 0) 100%);
+  border-radius: 50%;
+  filter: blur(20px);
+  z-index: 0;
+  pointer-events: none;
+}
+.locofy_section3 > * { position: relative; z-index: 2; }
+
+/* ===== ТЕХНОЛОГИИ: контур + жёсткий overflow:hidden чтобы картинки не вылазили ===== */
+.locofy_section6 .locofy_div66,
+.locofy_section6 .locofy_div68,
+.locofy_section6 .locofy_div70,
+.locofy_section6 .locofy_div72,
+.locofy_section6 .locofy_div74,
+.locofy_section6 .locofy_div76 {
+  border: 1px solid rgba(0, 24, 48, 0.18) !important;
+  box-shadow: 0 2px 10px rgba(25, 88, 153, 0.05) !important;
+  overflow: hidden !important;
+}
+
+/* Технологии как основа для бизнеса — пятно справа */
+.locofy_section6 {
+  position: relative !important;
+  overflow: visible !important;
+}
+.locofy_section6::before {
+  content: '';
+  position: absolute;
+  top: 273px;
+  left: 651px;
+  width: 885px;
+  height: 752px;
+  background: radial-gradient(ellipse at center,
+    rgba(25, 88, 153, 0.28) 0%,
+    rgba(25, 88, 153, 0.18) 45%,
+    rgba(25, 88, 153, 0.08) 75%,
+    rgba(25, 88, 153, 0) 100%);
+  border-radius: 50%;
+  filter: blur(20px);
+  z-index: 0;
+  pointer-events: none;
+}
+.locofy_section6 > * { position: relative; z-index: 2; }
+
+/* Скачайте мобильное приложение — пятно справа */
+.locofy_div78::before {
+  content: '';
+  position: absolute;
+  top: 273px;
+  left: 651px;
+  width: 885px;
+  height: 752px;
+  background: radial-gradient(ellipse at center,
+    rgba(25, 88, 153, 0.28) 0%,
+    rgba(25, 88, 153, 0.18) 45%,
+    rgba(25, 88, 153, 0.08) 75%,
+    rgba(25, 88, 153, 0) 100%);
+  border-radius: 50%;
+  filter: blur(20px);
+  z-index: 0;
+  pointer-events: none;
+}
+.locofy_div78 > * { position: relative; z-index: 2; }
+
+/* ===== СТАТЬИ: фикс — фото не должны налезать на заголовок ===== */
+.locofy_section7 {
+  position: relative !important;
+  overflow: hidden !important;
+  gap: 40px !important;
+  padding-top: 70px !important;
+  padding-bottom: 80px !important;
+}
+
+.locofy_h210 {
+  margin: 0 0 30px 0 !important;
+  display: block !important;
+  width: 100% !important;
+  z-index: 10 !important;
+  position: relative !important;
+}
+
+.locofy_section7 .locofy_frame-parent5 {
+  margin-top: 0 !important;
+  width: 100% !important;
+}
+
+/* Главный фикс — у Locofy .locofy_photo-display имеет top:-370px, что подтягивает фото вверх и они закрывают h2 */
+.locofy_photo-display {
+  top: 0 !important;
+  right: 0 !important;
+  position: relative !important;
+  width: 100% !important;
+  height: 380px !important;
+}
+
+.locofy_icon17, .locofy_icon18, .locofy_icon19 {
+  top: 0 !important;
+}
+
+/* Скрываем декоративную SVG-подложку 13.svg за фото — не нужна */
+.locofy_icon16 { display: none !important; }
+.locofy_section7::before {
+  content: '';
+  position: absolute;
+  top: 94px;
+  left: 235.5px;
+  width: 1355.5px;
+  height: 506.15px;
+  background: radial-gradient(ellipse at center,
+    rgba(25, 88, 153, 0.28) 0%,
+    rgba(25, 88, 153, 0.18) 45%,
+    rgba(25, 88, 153, 0.08) 75%,
+    rgba(25, 88, 153, 0) 100%);
+  border-radius: 50%;
+  filter: blur(20px);
+  z-index: 0;
+  pointer-events: none;
+}
+.locofy_section7 > * { position: relative; z-index: 2; }
+
+/* Футер должен быть выше пятна и сам не показывать поверх него ничего лишнего */
+.fc_footer {
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+.locofy_h210 {
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+/* ===== FOOTER: search input — стилизация ===== */
+.locofy_input {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  font-family: 'Onest', sans-serif;
+  font-size: 14px;
+  outline: none;
+  max-width: 320px;
+}
+
+.locofy_input::placeholder { color: rgba(255, 255, 255, 0.45); }
+
+/* Хедер — fixed, чтобы прилипал ко всей странице, а не только к первой секции */
+.locofy_header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 1280px !important;
+  max-width: 100% !important;
+  z-index: 999 !important;
+  background-color: rgba(255, 255, 255, 0.55) !important;
+  backdrop-filter: blur(14px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(140%) !important;
+}
+
+/* Сдвигаем контент вниз, чтобы fixed-хедер его не перекрывал */
+.locofy_root {
+  padding-top: 94px;
+}
+
+/* Nav links — remove underline + give pointer + hover state */
+.locofy_div2 a,
+.locofy_div2 a:visited {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.locofy_div2 a:hover {
+  color: #001830;
+}
+
+/* Round phone/profile icon buttons - hover */
+.locofy_div8 a {
+  display: inline-flex;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.locofy_div8 a:hover { opacity: 0.75; }
+
+/* Buttons cursor */
+.locofy_button2,
+.locofy_button3,
+.locofy_button4 { cursor: pointer; }
+
+/* ===== Modal ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: rgba(0, 24, 48, 0.55);
+  backdrop-filter: blur(4px);
+}
+
+.modal.is-open { display: flex; }
+
+.modal__dialog {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  background: #E9F7FF;
+  border-radius: 30px;
+  padding: 50px 60px;
+  box-shadow: 0 30px 80px rgba(0, 24, 48, 0.25);
+  font-family: 'Onest', sans-serif;
+}
+
+.modal__close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  width: 34px;
+  height: 34px;
+  font-size: 24px;
+  line-height: 1;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  color: #001830;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__close:hover { background: #FFFFFF; }
+
+.modal__title {
+  font-family: 'Onest', sans-serif;
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #001830;
+  margin: 0 0 28px;
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.form__label {
+  font-family: 'Onest', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #001830;
+}
+
+.form__input {
+  height: 50px;
+  padding: 0 24px;
+  background: #FFFFFF;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-family: 'Onest', sans-serif;
+  font-size: 14px;
+  color: #001830;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form__input::placeholder { color: rgba(0, 0, 0, 0.4); }
+.form__input:focus { border-color: #001830; }
+
+.form__textarea {
+  height: 50px;
+  resize: none;
+  padding-top: 16px;
+  border-radius: 20px;
+}
+
+.form__check {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 14px 0 22px;
+  font-family: 'Onest', sans-serif;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.65);
+  cursor: pointer;
+  user-select: none;
+}
+
+.form__check input {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid rgba(0, 0, 0, 0.35);
+  border-radius: 4px;
+  background: #FFFFFF;
+  cursor: pointer;
+  position: relative;
+}
+
+.form__check input:checked {
+  background: #001830;
+  border-color: #001830;
+}
+
+.form__check input:checked::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 0;
+  width: 6px;
+  height: 11px;
+  border: solid #FFFFFF;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.form__submit {
+  width: 100%;
+  height: 60px;
+  border: 0;
+  border-radius: 999px;
+  background: #001830;
+  color: #FFFFFF;
+  font-family: 'Onest', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.form__submit:hover { background: #002a52; }
