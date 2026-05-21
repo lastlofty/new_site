@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Технологическая платформа — Кофелар</title>
+  <meta name="description" content="ERP-система, мобильные приложения и аналитика — единая цифровая инфраструктура Кофелар." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/inner.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="Кофелар">
+        <svg width="41" height="33" viewBox="0 0 41 33" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M3 3 C 3 22, 18 30, 20.5 30 C 23 30, 38 22, 38 3" stroke="#111B22" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+          <line x1="20.5" y1="0" x2="20.5" y2="33" stroke="#111B22" stroke-width="3.5" stroke-linecap="round"/>
+        </svg>
+      </a>
+      <nav class="nav" data-nav>
+        <a href="index.html" class="nav__link">Главная</a>
+        <a href="tehplatforma.html" class="nav__link is-active">Технологическая платформа</a>
+        <a href="service.html" class="nav__link">Сервис и поддержка</a>
+        <a href="about.html" class="nav__link">О компании</a>
+        <a href="blog.html" class="nav__link">Блог</a>
+      </nav>
+      <div class="header__actions">
+        <button class="btn btn--sm" type="button" data-modal-open>Заказать звонок</button>
+        <a href="tel:+79053169392" class="btn--icon-sm" aria-label="Телефон">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </a>
+        <a href="#account" class="btn--icon-sm" aria-label="Личный кабинет">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <button class="burger" type="button" data-burger aria-label="Меню"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="inner-hero">
+    <div class="container">
+      <div class="inner-hero__inner">
+        <div class="inner-hero__content">
+          <h1 class="inner-hero__title">Технологическая<br/>платформа</h1>
+          <p class="inner-hero__lead">
+            Мы разрабатываем и используем все технологии внутри компании — от ERP-системы до мобильных приложений для клиентов и сотрудников.
+          </p>
+          <div class="inner-hero__cta-group">
+            <div class="btn-row">
+              <button class="btn btn--ghost" type="button" data-modal-open>Задать вопрос</button>
+              <button class="btn--icon-outline" type="button" data-modal-open aria-label="Отправить">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </button>
+            </div>
+            <div class="btn-row">
+              <button class="btn" type="button" data-modal-open>Запросить демонстрацию</button>
+              <button class="btn--icon" type="button" data-modal-open aria-label="Отправить">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <img src="img/glass-twist.png" alt="" class="inner-hero__art" />
+      </div>
+
+      <div class="inner-features">
+        <div class="advantage">
+          <div class="advantage__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div>
+            <div class="advantage__title">Собственная разработка</div>
+            <div class="advantage__text">Все цифровые решения создаются компанией, что позволяет гибко развивать платформу и внедрять новые функции.</div>
+          </div>
+        </div>
+        <div class="advantage">
+          <div class="advantage__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div>
+            <div class="advantage__title">Единая система управления</div>
+            <div class="advantage__text">Платформа объединяет все направления работы в одной цифровой среде, обеспечивая контроль всех процессов.</div>
+          </div>
+        </div>
+        <div class="advantage">
+          <div class="advantage__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="9"/><line x1="12" y1="15" x2="12" y2="22"/><line x1="2" y1="12" x2="9" y2="12"/><line x1="15" y1="12" x2="22" y2="12"/></svg>
+          </div>
+          <div>
+            <div class="advantage__title">Работа в реальной сети</div>
+            <div class="advantage__text">Все технологии ежедневно используются, что позволяет совершенствовать систему на основе реального опыта.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ECOSYSTEM TABS -->
+  <section class="eco">
+    <div class="container">
+      <h2 class="eco__title">Экосистема Кофелар</h2>
+      <div class="eco__panel" data-eco>
+        <div class="eco__tabs" data-eco-tabs>
+          <button class="eco__tab is-active" data-eco-tab="business">Кофейный бизнес</button>
+          <button class="eco__tab" data-eco-tab="tech">Технологическая платформа</button>
+          <button class="eco__tab" data-eco-tab="service">Сервис и инфраструктура</button>
+        </div>
+
+        <div class="eco__content" data-eco-pane="business">
+          <div class="eco__cards">
+            <div class="eco-card">
+              <div class="eco-card__title">Контроль качества</div>
+              <div class="eco-card__text">Постоянный мониторинг и регламенты обслуживания обеспечивают стабильный вкус напитков и бесперебойную работу.</div>
+            </div>
+            <div class="eco-card">
+              <div class="eco-card__title">Операционная модель</div>
+              <div class="eco-card__text">Все процессы стандартизированы: от установки и настройки до регулярного контроля работы оборудования.</div>
+            </div>
+            <div class="eco-card">
+              <div class="eco-card__title">Оптимизация локаций</div>
+              <div class="eco-card__text">Анализ потока и подбор форматов под конкретную точку — от мини-кофейни до полноценного бара.</div>
+            </div>
+            <div class="eco-card">
+              <div class="eco-card__title">Собственные и партнёрские точки</div>
+              <div class="eco-card__text">Развиваем сеть кофе-точек в разных форматах, объединённых едиными стандартами качества и обслуживания.</div>
+            </div>
+          </div>
+          <div class="eco__art"><img src="img/фигура.png" alt="" /></div>
+          <button class="btn eco__cta" type="button" data-modal-open>
+            Подробнее
+            <span class="btn--icon" style="width:36px;height:36px;background:transparent;border:1.5px solid #fff;margin-left:6px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ERP SCHEME -->
+  <section class="erp">
+    <img src="img/glass-spring.png" alt="" class="erp__bg" />
+    <div class="container">
+      <div class="erp__head">
+        <div class="erp__head-card">ERP-система</div>
+      </div>
+      <div class="erp__lines">
+        <span style="left: 10%;"></span>
+        <span style="left: 30%;"></span>
+        <span style="left: 50%;"></span>
+        <span style="left: 70%;"></span>
+        <span style="left: 90%;"></span>
+      </div>
+      <div class="erp__grid">
+        <div class="erp-card">
+          <div class="erp-card__title">Приложение для клиентов</div>
+          <div class="erp-card__text">Мобильное приложение делает взаимодействие с кофейными точками удобнее для пользователей: участие в программе лояльности, акции и оплата.</div>
+        </div>
+        <div class="erp-card">
+          <div class="erp-card__title">Приложение для операторов</div>
+          <div class="erp-card__text">Инструмент для контроля и обслуживания кофейных аппаратов с чек-листами и уведомлениями.</div>
+        </div>
+        <div class="erp-card">
+          <div class="erp-card__title">Склад и логистика</div>
+          <div class="erp-card__text">Система управляет движением ресурсов, расходных материалов и комплектующих, прогнозирует поставки.</div>
+        </div>
+        <div class="erp-card">
+          <div class="erp-card__title">Аналитика</div>
+          <div class="erp-card__text">Все ключевые показатели сети в одном дашборде: продажи, остатки, эффективность точек.</div>
+        </div>
+        <div class="erp-card">
+          <div class="erp-card__title">Автоматизация</div>
+          <div class="erp-card__text">Бизнес-процессы автоматизированы: от заказа расходников до диагностики оборудования.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APP FOR CLIENTS -->
+  <section class="app-block">
+    <div class="container">
+      <div class="app-block__head">
+        <h2 class="app-block__title">Приложение для клиентов</h2>
+        <p class="app-block__text">Мобильное приложение делает взаимодействие с кофейными точками удобнее для пользователей. Через него клиенты могут участвовать в программе лояльности, получать предложения и находить ближайшие точки.</p>
+      </div>
+
+      <div class="app-block__phones">
+        <img src="img/phone-map.png" alt="Приложение Кофелар для клиентов" style="width: 100%; max-width: 900px; height: auto;" />
+      </div>
+
+      <div class="app-block__sub">Функционал:</div>
+      <div class="tags">
+        <span class="tag">Предзаказ напитков</span>
+        <span class="tag">Push-уведомления и акции</span>
+        <span class="tag">Бонусная программа</span>
+        <span class="tag">Оплата через приложение</span>
+        <span class="tag">Карта кофейных точек</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- APP FOR OPERATORS -->
+  <section class="app-block app-block--dark">
+    <div class="container">
+      <div class="app-block__head">
+        <h2 class="app-block__title">Приложение для операторов</h2>
+        <p class="app-block__text">Инструмент для контроля и обслуживания кофейных аппаратов. Позволяет отслеживать состояние оборудования, фиксировать обслуживание и получать уведомления о необходимых действиях.</p>
+      </div>
+
+      <div class="app-block__phones">
+        <img src="img/icon-phone-checklist.png" alt="Приложение для операторов" style="max-width: 280px; height: auto;" />
+        <img src="img/icon-phone-messages.png" alt="" style="max-width: 280px; height: auto;" />
+      </div>
+
+      <div class="app-block__sub">Функционал:</div>
+      <div class="tags">
+        <span class="tag">Чек-листы обслуживания</span>
+        <span class="tag">Уведомления о неисправностях</span>
+        <span class="tag">Учёт расхода ингредиентов</span>
+        <span class="tag">Контроль инкассации</span>
+        <span class="tag">Фотоотчёты с точек</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAREHOUSE & LOGISTICS -->
+  <section class="app-block">
+    <div class="container">
+      <div class="app-block__head">
+        <h2 class="app-block__title">Склад и логистика</h2>
+        <p class="app-block__text">Система управляет движением ресурсов, расходных материалов и комплектующих. Она помогает контролировать остатки, планировать поставки и поддерживать бесперебойную работу точек.</p>
+      </div>
+
+      <div class="app-block__phones">
+        <svg width="180" height="380" viewBox="0 0 180 380" aria-hidden="true"><rect x="6" y="6" width="168" height="368" rx="32" fill="#0A1A26"/></svg>
+        <svg width="180" height="380" viewBox="0 0 180 380" aria-hidden="true"><rect x="6" y="6" width="168" height="368" rx="32" fill="#0A1A26"/></svg>
+        <svg width="180" height="380" viewBox="0 0 180 380" aria-hidden="true"><rect x="6" y="6" width="168" height="368" rx="32" fill="#0A1A26"/></svg>
+      </div>
+
+      <div class="app-block__sub">Функционал:</div>
+      <div class="tags">
+        <span class="tag">Учёт прихода и расхода</span>
+        <span class="tag">Остатки по всем позициям</span>
+        <span class="tag">История операций и отчёты</span>
+        <span class="tag">Прогнозирование закупок</span>
+        <span class="tag">Уведомления о минимальных остатках</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES (6 cards) -->
+  <section class="features">
+    <div class="container">
+      <h2 class="features__title">Основные возможности</h2>
+      <div class="features__grid">
+        <div class="feature-card">
+          <div class="feature-card__title">Дашборд</div>
+          <div class="feature-card__sub">с ключевыми показателями</div>
+          <div class="feature-card__icon"><img src="img/icon-dashboard.png" alt="" /></div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__title">Финансовый учёт</div>
+          <div class="feature-card__sub">и отчётность</div>
+          <div class="feature-card__icon"><img src="img/icon-calculator.png" alt="" /></div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__title">Управление</div>
+          <div class="feature-card__sub">сотрудниками и доступами</div>
+          <div class="feature-card__icon"><img src="img/icon-person-tie.png" alt="" /></div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__title">Аналитика</div>
+          <div class="feature-card__sub">по продажам и эффективности</div>
+          <div class="feature-card__icon"><img src="img/icon-monitor-analytics.png" alt="" /></div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__title">Управление</div>
+          <div class="feature-card__sub">точками продаж</div>
+          <div class="feature-card__icon"><img src="img/icon-notebook.png" alt="" /></div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__title">Интеграция</div>
+          <div class="feature-card__sub">с бухгалтерскими системами</div>
+          <div class="feature-card__icon"><img src="img/icon-calculator.png" alt="" /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO FORM -->
+  <section class="demo">
+    <img src="img/glass-rings.png" alt="" class="demo__art" />
+    <div class="container">
+      <div class="demo__inner">
+        <div>
+          <h2 class="demo__title">Посмотреть платформу в работе</h2>
+          <p class="demo__lead">Запросите демонстрацию — покажем интерфейсы и ответим на технические вопросы</p>
+        </div>
+        <form class="form demo__form" novalidate>
+          <div class="form__field"><label class="form__label" for="d-name">Ваше имя:</label><input class="form__input" id="d-name" type="text" placeholder="Иван" required /></div>
+          <div class="form__field"><label class="form__label" for="d-phone">Номер телефона:</label><input class="form__input" id="d-phone" type="tel" placeholder="+7 (917) 123-45-67" required /></div>
+          <div class="form__field"><label class="form__label" for="d-mail">Электронная почта:</label><input class="form__input" id="d-mail" type="email" placeholder="example@mail.com" /></div>
+          <div class="form__field"><label class="form__label" for="d-msg">Комментарий:</label><textarea class="form__input form__textarea" id="d-msg" placeholder="Введите текст"></textarea></div>
+          <label class="form__check"><input type="checkbox" required /><span>Я даю согласие на обработку персональных данных</span></label>
+          <button class="form__submit" type="submit">Оставить заявку</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__rows">
+        <div class="footer__row">
+          <div class="footer__col">
+            <h4 class="footer__col-title">Контакты</h4>
+            <div class="footer__list">
+              <a href="tel:+79053169392" class="footer__link">8 (905) 316-93-92</a>
+              <a href="#tg" class="footer__link">@nickname</a>
+              <a href="mailto:Koffelarkzn716@gmail.com" class="footer__link">Koffelarkzn716@gmail.com</a>
+              <a href="#tg2" class="footer__link">@nickname</a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__col-title">Компания</h4>
+            <div class="footer__list">
+              <a href="tehplatforma.html" class="footer__link">Технологическая платформа</a>
+              <a href="service.html" class="footer__link">Сервис и поддержка</a>
+              <a href="about.html" class="footer__link">О компании</a>
+              <a href="blog.html" class="footer__link">Блог</a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__col-title">Медиа</h4>
+            <div class="footer__list">
+              <a href="#install" class="footer__link">Установить приложение</a>
+              <a href="#reviews" class="footer__link">Отзывы</a>
+              <a href="#press" class="footer__link">О нас говорят</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__row">
+          <div class="footer__col">
+            <h4 class="footer__col-title">Адрес</h4>
+            <div class="footer__list">
+              <span class="footer__text">г. Казань, Проспект Победы 173</span>
+              <span class="footer__text" style="margin-top:8px">Пн - Сб - с 9:00 до 18:00</span>
+              <span class="footer__text">Вс - выходной</span>
+            </div>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__col-title">Партнёрам</h4>
+            <div class="footer__list">
+              <a href="#franchise" class="footer__link">Франшиза</a>
+              <a href="#landlords" class="footer__link">Арендодатели</a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <div class="footer__socials">
+              <a href="#wa" class="footer__social" aria-label="WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/></svg></a>
+              <a href="#tg" class="footer__social" aria-label="Telegram"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M22 3 2 11l6 2 2 6 4-4 6 5 2-17zM9 14l8-6-6 7-.4 3z"/></svg></a>
+              <a href="#vk" class="footer__social" aria-label="ВКонтакте"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12.93 16.36c-4.5 0-7.07-3.08-7.18-8.2h2.26c.07 3.76 1.73 5.36 3.05 5.69V8.16h2.13v3.26c1.3-.14 2.66-1.62 3.12-3.26h2.13c-.35 2.02-1.83 3.5-2.87 4.11 1.04.5 2.73 1.79 3.37 4.09h-2.34c-.5-1.57-1.75-2.78-3.4-2.95v2.95h-.27z"/></svg></a>
+              <a href="#yt" class="footer__social" aria-label="YouTube"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M22 7.1a2.5 2.5 0 0 0-1.8-1.8C18.6 5 12 5 12 5s-6.6 0-8.2.3A2.5 2.5 0 0 0 2 7.1 26 26 0 0 0 1.7 12 26 26 0 0 0 2 16.9a2.5 2.5 0 0 0 1.8 1.8C5.4 19 12 19 12 19s6.6 0 8.2-.3a2.5 2.5 0 0 0 1.8-1.8c.3-1.6.3-4.9.3-4.9s0-3.3-.3-4.9zM10 15V9l5 3z"/></svg></a>
+            </div>
+            <form class="footer__search" role="search">
+              <input type="search" placeholder="Введите запрос..." aria-label="Поиск" />
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>Кофелар 2026</span>
+        <div class="footer__legal">
+          <a href="#privacy">Политика конфиденциальности</a>
+          <a href="#offer">Публичная оферта</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal" data-modal aria-hidden="true">
+  <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal__close" type="button" data-modal-close aria-label="Закрыть">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <h2 id="modalTitle" class="modal__title">Давайте начнём сотрудничество уже сегодня!</h2>
+    <form class="form" novalidate>
+      <div class="form__field"><label class="form__label" for="f-name">Ваше имя:</label><input class="form__input" id="f-name" type="text" placeholder="Иван" required /></div>
+      <div class="form__field"><label class="form__label" for="f-phone">Номер телефона:</label><input class="form__input" id="f-phone" type="tel" placeholder="+7 (917) 123-45-67" required /></div>
+      <div class="form__field"><label class="form__label" for="f-mail">Электронная почта:</label><input class="form__input" id="f-mail" type="email" placeholder="example@mail.com" /></div>
+      <div class="form__field"><label class="form__label" for="f-msg">Комментарий:</label><textarea class="form__input form__textarea" id="f-msg" placeholder="Введите текст"></textarea></div>
+      <label class="form__check"><input type="checkbox" required /><span>Я даю согласие на обработку персональных данных</span></label>
+      <button class="form__submit" type="submit">Оставить заявку</button>
+    </form>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+  // Eco tabs
+  (function() {
+    const tabsEl = document.querySelector('[data-eco-tabs]');
+    if (!tabsEl) return;
+    const data = {
+      business: [
+        { t: 'Контроль качества', d: 'Постоянный мониторинг и регламенты обслуживания обеспечивают стабильный вкус напитков и бесперебойную работу.' },
+        { t: 'Операционная модель', d: 'Все процессы стандартизированы: от установки и настройки до регулярного контроля работы оборудования.' },
+        { t: 'Оптимизация локаций', d: 'Анализ потока и подбор форматов под конкретную точку — от мини-кофейни до полноценного бара.' },
+        { t: 'Собственные и партнёрские точки', d: 'Развиваем сеть кофе-точек в разных форматах, объединённых едиными стандартами качества и обслуживания.' }
+      ],
+      tech: [
+        { t: 'ERP-система управления', d: 'Централизованный контроль продаж, оборудования, запасов и финансов в режиме реального времени.' },
+        { t: 'Мобильные приложения', d: 'Цифровые инструменты упрощают обслуживание аппаратов, контроль состояния и взаимодействие с клиентами.' },
+        { t: 'Аналитика и автоматизация', d: 'Система анализирует данные, прогнозирует загрузку точек и автоматически оптимизирует операционные процессы.' },
+        { t: 'Удалённый мониторинг оборудования', d: 'Онлайн-контроль состояния аппаратов, уведомления о неисправностях и предотвращение простоев.' }
+      ],
+      service: [
+        { t: 'Склад запчастей', d: 'Постоянное наличие комплектующих и расходных материалов для оперативного обслуживания.' },
+        { t: 'Логистика и снабжение', d: 'Отлаженные поставки кофе, ингредиентов и расходников обеспечивают непрерывную работу оборудования.' },
+        { t: 'Сервисная служба', d: 'Техническая поддержка, диагностика и обслуживание аппаратов гарантируют стабильную работу сети.' },
+        { t: 'Регламенты обслуживания', d: 'Чёткие чек-листы и регулярные плановые работы продлевают срок службы оборудования.' }
+      ]
+    };
+    const cardsEl = document.querySelector('[data-eco-pane="business"] .eco__cards');
+    tabsEl.addEventListener('click', (e) => {
+      const tab = e.target.closest('[data-eco-tab]');
+      if (!tab) return;
+      tabsEl.querySelectorAll('.eco__tab').forEach((t) => t.classList.remove('is-active'));
+      tab.classList.add('is-active');
+      const key = tab.dataset.ecoTab;
+      cardsEl.innerHTML = data[key].map((c) =>
+        `<div class="eco-card"><div class="eco-card__title">${c.t}</div><div class="eco-card__text">${c.d}</div></div>`
+      ).join('');
+    });
+  })();
+</script>
+</body>
+</html>
